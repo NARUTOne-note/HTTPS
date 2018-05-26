@@ -6,6 +6,7 @@
 - [xhr](http://javascript.ruanyifeng.com/bom/ajax.html)
 - [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 - [hosts 管理 SwitchHosts ](https://github.com/oldj/SwitchHosts/releases)
+- [四种常见的 POST 提交数据方式](https://imququ.com/post/four-ways-to-post-data-in-http.html)
 
 ### fetch
 
