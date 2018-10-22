@@ -75,7 +75,6 @@ http://www.microsoft.com/china/index.htm ，含义如下：
 - [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 - [hosts 管理 SwitchHosts](https://github.com/oldj/SwitchHosts/releases)
 
-
 ### fetch
 
 - [传统 Ajax 已死，Fetch 永生](https://github.com/camsong/blog/issues/2)
@@ -95,3 +94,7 @@ http://www.microsoft.com/china/index.htm ，含义如下：
 ### 前端服务器test
 
 - [前端如何拥有自己的服务器](http://mp.weixin.qq.com/s/sHy1oajwy_FDy07sMTFmUA)
+
+### 服务渲染
+
+[细说后端模板渲染、客户端渲染、node 中间层、服务器端渲染（ssr）](https://mp.weixin.qq.com/s/Uqd9ho5-iacplojxP59pOw)
