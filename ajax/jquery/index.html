@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">ajax测试</button>
+</body>
+<script src="./lib/jquery-3.3.1.min.js"></script>
+<script>
+  document.getElementById('btn').onclick = function (e) {
+    $.ajax({
+      url: 'https://easy-mock.com/mock/5ac9c01cd4c08a6a0df5406c/monitor/mock/verify/dataProduct',
+      type: 'POST',
+      data: {
+        page: 1,
+        pageSize: 10
+      },
+      success: function (res) {
+        alert('success!');
+        console.log(res);
+      }
+    })
+  }
+</script>
+</html>

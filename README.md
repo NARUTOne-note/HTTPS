@@ -39,7 +39,7 @@
 
 http://www.microsoft.com/china/index.htm ，含义如下：
 
-- http:// ：代表超文本传输协议，通知microsoft.com服务器显示Web页，通常不用输入。
+- http://：代表超文本传输协议，通知microsoft.com服务器显示Web页，通常不用输入。
 - www：代表一个Web（万维网）服务器；
 - Microsoft.com/：这是装有网页的服务器的域名，或站点服务器的名称；
 - China/：为该服务器上的子目录，就好像我们的文件夹；
@@ -62,18 +62,19 @@ http://www.microsoft.com/china/index.htm ，含义如下：
 
 - [express](http://expressjs.com/zh-cn/)
 
+### 前端服务器test
+
+- [前端如何拥有自己的服务器](http://mp.weixin.qq.com/s/sHy1oajwy_FDy07sMTFmUA)
+
+### 服务渲染
+
+[细说后端模板渲染、客户端渲染、node 中间层、服务器端渲染（ssr）](https://mp.weixin.qq.com/s/Uqd9ho5-iacplojxP59pOw)
+
 ## ajax
 
 - [XMLHttpRequest 规范](https://xhr.spec.whatwg.org/)
 - [xhr](http://javascript.ruanyifeng.com/bom/ajax.html)
 - [四种常见的 POST 提交数据方式](https://imququ.com/post/four-ways-to-post-data-in-http.html)
-
-## 小计
-
-- [url src href link](http://mp.weixin.qq.com/s/cUCTTtesmeqTd52aetdnwQ)
-- [浏览器同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
-- [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
-- [hosts 管理 SwitchHosts](https://github.com/oldj/SwitchHosts/releases)
 
 ### fetch
 
@@ -87,14 +88,14 @@ http://www.microsoft.com/china/index.htm ，含义如下：
 - [github axios](https://github.com/axios/axios)
 - [axios全攻略](https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/)
 
-### 存储
+## 存储
 
 - [三种前端本地存储方式讲解](http://mp.weixin.qq.com/s/dnobWOywJanknkGQVurEaw)
 
-### 前端服务器test
+## 随记
 
-- [前端如何拥有自己的服务器](http://mp.weixin.qq.com/s/sHy1oajwy_FDy07sMTFmUA)
-
-### 服务渲染
-
-[细说后端模板渲染、客户端渲染、node 中间层、服务器端渲染（ssr）](https://mp.weixin.qq.com/s/Uqd9ho5-iacplojxP59pOw)
+- [前后端均适用的网络知识点大全](https://mp.weixin.qq.com/s/uF3bJrjGbGCAzCuCWk18BA)
+- [url src href link](http://mp.weixin.qq.com/s/cUCTTtesmeqTd52aetdnwQ)
+- [浏览器同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
+- [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+- [hosts 管理 SwitchHosts](https://github.com/oldj/SwitchHosts/releases)
