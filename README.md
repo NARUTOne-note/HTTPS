@@ -37,13 +37,17 @@
 
 [HTTP协议](https://www.jianshu.com/p/80e25cb1d81a)
 
-http://www.microsoft.com/china/index.htm ，含义如下：
+`http://www.microsoft.com/china/index.htm`，含义如下：
 
-- http://：代表超文本传输协议，通知microsoft.com服务器显示Web页，通常不用输入。
+- `http://：`代表超文本传输协议，通知microsoft.com服务器显示Web页，通常不用输入。
 - www：代表一个Web（万维网）服务器；
 - Microsoft.com/：这是装有网页的服务器的域名，或站点服务器的名称；
 - China/：为该服务器上的子目录，就好像我们的文件夹；
 - Index.htm：index.htm是文件夹中的一个HTML文件（网页）。
+
+**参考**：
+
+- [一次安全可靠的通信——HTTPS原理](https://developers.weixin.qq.com/community/develop/article/doc/000046a5fdc7802a15f7508b556413)
 
 ### ftp协议
 
