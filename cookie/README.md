@@ -29,31 +29,31 @@
 
 ## 使用
 
-> 增删改查 
+> 增删改查
 
 ```js
 var manageCookie = {
-	setCookie:function(name,value,time){
-		document.cookie = name + '=' + value + ';max-age'+time;
-		return this;
-	},
-	removeCookie: function(name){
-		this.setCookie(name,'',-1);
-		return this;
-	},
-	getCookie: function(name,callback){  //不考虑同名不同路径的cookie,即默认即使不同路径也不会出现同名的cookie
-		//此处利用数组处理    
-		var allCookieArr = document.cookie.split('; ');
-		for(var i =0;i<allCookieArr.length;i++){
-			var itemArr = allCookieArr[i].split('=');
-			if(itemArr[0] == name){
-				callback({itemArr[0]:itemArr[1]});
-				return this;     //参数有一个function是因为return被链式调用占用，而得到值不只是显示，所以设置一个回调函数处理此值
-			}
-		}
-		callback({undefined:undefined});
-		return this;
-	}
+  setCookie:function(name,value,time){
+    document.cookie = name + '=' + value + ';max-age'+time;
+    return this;
+  },
+  removeCookie: function(name){
+    this.setCookie(name,'',-1);
+    return this;
+  },
+  getCookie: function(name,callback){  //不考虑同名不同路径的cookie,即默认即使不同路径也不会出现同名的cookie
+    //此处利用数组处理
+    var allCookieArr = document.cookie.split('; ');
+    for(var i =0;i<allCookieArr.length;i++){
+      var itemArr = allCookieArr[i].split('=');
+      if(itemArr[0] == name){
+        callback({itemArr[0]:itemArr[1]});
+        return this;     //参数有一个function是因为return被链式调用占用，而得到值不只是显示，所以设置一个回调函数处理此值
+      }
+    }
+    callback({undefined:undefined});
+    return this;
+  }
 }
 
 ```
@@ -89,7 +89,7 @@ document.cookie = "name = value; path=/";
 
 表示的是cookie所在的域，默认为请求的地址，
 
-如网址为 http://www.haorooms.com/post/long_lianjie_websocket ，那么domain默认为www.haorooms.com。
+如网址为 `http://www.haorooms.com/post/long_lianjie_websocket` ，那么domain默认为`www.haorooms.com`。
 
 而跨域访问，
 
@@ -108,5 +108,6 @@ document.cookie = "name = value; path=/";
 - nodejs superagent
 - ajax  
   - 使用jsonp格式发送
-  - ajax请求中加上字段 xhrFields: {withCredentials: true}，这样可以携带上cookie
-  - 服务器需要配置：Access-Control-Allow-Credentials: true
+  - ajax请求中加上字段 `xhrFields: {withCredentials: true}`，这样可以携带上cookie
+  - 服务器需要配置：`Access-Control-Allow-Credentials: true`
+  
