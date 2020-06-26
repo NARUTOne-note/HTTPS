@@ -43,4 +43,3 @@ disk cache 会严格根据 HTTP 头信息中的各类字段来判定哪些资源
 1、根据 Service Worker 中的 handler 决定是否存入 Cache Storage (额外的缓存位置)。
 2、根据 HTTP 头部的相关字段(Cache-control, Pragma 等)决定是否存入 disk cache
 3、memory cache 保存一份资源 的引用，以备下次使用。
-

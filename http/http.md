@@ -10,6 +10,7 @@
 > 浏览器输入URL后HTTP请求返回过程
 
 ![url解析](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/http/url-http.png)
+![三次握手和四次挥手](https://zhuanlan.zhihu.com/p/86426969)
 
 ### URI、URL、URN
 
