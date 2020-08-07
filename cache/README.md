@@ -3,6 +3,7 @@
 > 背景：了解缓存，优化流程，提升性能
 
 - [缓存参考](https://juejin.im/post/5d9d539ee51d45780f0604fa?utm_source=gold_browser_extension)
+- [前端缓存](https://zhuanlan.zhihu.com/p/44789005)
 
 ## why
 
