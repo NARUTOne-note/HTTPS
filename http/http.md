@@ -98,6 +98,8 @@ TCP/IP协议将应用层、表示层、会话层合并为应用层，物理层�
 - 三、http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
 - 四、http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
 
+![https 传输过程](./https.png)
+
 ### http报文
 
 ![http报文](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/http/HTTP-web.png)
