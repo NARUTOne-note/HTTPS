@@ -186,6 +186,8 @@ const router = new Router({
 
 ### 反向代理部署
 
+反向代理也叫reverse proxy，指的是代理外网用户的请求到内部的指定web服务器，并将数据返回给用户的一种方式，这是用的比较多的一种方式, **正向代理代理客户端，反向代理代理服务器**
+
 - 在 `conf/vhost` 文件夹下创建 `A.conf` 来写入A工程部署到域名XXX（ www.xxx.com ）根路径上的部署配置
 
 ```bash
@@ -201,6 +203,7 @@ server {
   # 反向代理 10.203.19.74 为真实服务器ip地址。这样间接实现了在域名XXX（ www.xxx.com ）的子路径 /bbb/ 上部署了B工程
   location ^~ /bbb {
     proxy_pass http://10.203.19.74:8081/;
+    proxy_hide_header Location;  # 若想隐藏多个head头部信息需要再次定义proxy_hide_header,不支持在后面接着写
   }
 }
 ```
@@ -217,6 +220,11 @@ server {
   }
 }
 ```
+
+反向代理配置参数：
+
+- `proxy_pass`: 用来设置将客户端请求转发给的后端服务器的主机，可以是主机名、IP地址：端口的方式，也可以代理到预先设置的主机群组
+- `proxy_hide_header`; 用于nginx作为反向代理的时候，在返回给客户端http响应的时候，隐藏后端服务版本相应头部的信息，可以设置在`http/server`或`location`块
 
 ### alias 配置部署
 
