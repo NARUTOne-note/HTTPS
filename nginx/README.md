@@ -11,6 +11,38 @@
 
 ## 配置
 
+1、全局块	与Nginx运行相关的全局设置
+2、events块	与网络连接有关的设置
+3、http块	代理、缓存、日志、虚拟主机等的配置
+4、server块	虚拟主机的参数设置（一个http块可包含多个server块）
+5、location块	定义请求路由及页面处理方式
+
+![](./nginx-map.png)
+
+### 内置变量
+
+- $args请求行中的参数，同$query_string
+- $content_length请求头中的Content-length字段
+- $content_type请求头中的Content-Type字段
+- $document_root当前请求在root指令中指定的值
+- $host请求行的主机名，或请求头字段 Host 中的主机名
+- $http_user_agent客户端agent信息
+- $http_cookie客户端cookie信息
+- $limit_rate可以限制连接速率的变量
+- $request_method客户端请求的动作，如GET或POST
+- $remote_addr客户端的IP地址
+- $remote_port客户端的端口
+- $remote_user已经经过Auth Basic Module验证的用户名
+- $request_filename当前请求的文件路径
+- $schemeHTTP方法（如http，https）
+- $server_protocol请求使用的协议，如HTTP/1.0或HTTP/1.1
+- $server_addr服务器地址
+- $server_name服务器名称
+- $server_port请求到达服务器的端口号
+- $request_uri包含请求参数的原始URI
+- $uri不带请求参数的当前URI
+- $document_uri与$uri相同
+
 ### server
 
 是在服务器上创建一个虚拟主机
@@ -152,9 +184,17 @@ server{
   location ^~ /doc {
     // 反向代理
     proxy_pass: http://127.0.0.1:8001/
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   }
 }
 ```
+
+proxy_pass：定义后端服务器的地址。
+proxy_set_header：修改从客户端传递到代理服务器的请求头。
+proxy_hide_header：隐藏从代理服务器返回的响应头。
+proxy_redirect：修改从代理服务器返回的响应头中的Location和Refresh头字段。
 
 ### rewrite
 
